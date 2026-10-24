@@ -1,0 +1,6 @@
+{
+  "name": "Fnote Loza — Luxury Jewelry",
+  "description": "Bilingual gold and silver jewelry brand and inventory platform for Fnote Loza, founded by Haile Meskel Aysheshem. Crafted with Meaning. Made to Last.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

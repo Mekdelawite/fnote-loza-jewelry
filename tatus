@@ -1,0 +1,224 @@
+backend/alembic/versions/001_initial_schema.py:4: trailing whitespace.
+[32m+[m[32mRevises:[m[41m [m
+backend/app/routers/products.py:29: trailing whitespace.
+[32m+[m[32m            (Product.name_en.ilike(s)) |[m[41m [m
+backend/app/routers/products.py:30: trailing whitespace.
+[32m+[m[32m            (Product.name_am.ilike(s)) |[m[41m [m
+backend/app/routers/products.py:31: trailing whitespace.
+[32m+[m[32m            (Product.sku.ilike(s)) |[m[41m [m
+backend/app/routers/products.py:45: trailing whitespace.
+[32m+[m[32m    product_in: ProductCreate,[m[41m [m
+index.html:12: trailing whitespace.
+[32m+[m[41m    [m
+src/App.tsx:30: trailing whitespace.
+[32m+[m[41m  [m
+src/components/Admin/AdminDashboard.tsx:3: trailing whitespace.
+[32m+[m[32mimport {[m[41m [m
+src/components/Admin/AdminDashboard.tsx:4: trailing whitespace.
+[32m+[m[32m  Product,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:5: trailing whitespace.
+[32m+[m[32m  Sale,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:6: trailing whitespace.
+[32m+[m[32m  InventoryMovement,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:7: trailing whitespace.
+[32m+[m[32m  DashboardSummary,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:8: trailing whitespace.
+[32m+[m[32m  BrandSettings,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:9: trailing whitespace.
+[32m+[m[32m  JewelryCategory,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:10: trailing whitespace.
+[32m+[m[32m  JewelryMaterial,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:15: trailing whitespace.
+[32m+[m[32mimport {[m[41m [m
+src/components/Admin/AdminDashboard.tsx:16: trailing whitespace.
+[32m+[m[32m  LayoutDashboard,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:17: trailing whitespace.
+[32m+[m[32m  Package,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:18: trailing whitespace.
+[32m+[m[32m  PlusCircle,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:19: trailing whitespace.
+[32m+[m[32m  ShoppingBag,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:20: trailing whitespace.
+[32m+[m[32m  Receipt,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:21: trailing whitespace.
+[32m+[m[32m  History,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:22: trailing whitespace.
+[32m+[m[32m  Settings,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:23: trailing whitespace.
+[32m+[m[32m  LogOut,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:24: trailing whitespace.
+[32m+[m[32m  X,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:25: trailing whitespace.
+[32m+[m[32m  Check,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:26: trailing whitespace.
+[32m+[m[32m  AlertTriangle,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:27: trailing whitespace.
+[32m+[m[32m  Edit2,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:28: trailing whitespace.
+[32m+[m[32m  Sliders,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:29: trailing whitespace.
+[32m+[m[32m  TrendingUp,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:30: trailing whitespace.
+[32m+[m[32m  DollarSign,[m[41m [m
+src/components/Admin/AdminDashboard.tsx:130: trailing whitespace.
+[32m+[m[32m    return p.name_en.toLowerCase().includes(q) ||[m[41m [m
+src/components/Admin/AdminDashboard.tsx:131: trailing whitespace.
+[32m+[m[32m           p.name_am.toLowerCase().includes(q) ||[m[41m [m
+src/components/FeaturedCollections.tsx:85: trailing whitespace.
+[32m+[m[41m                [m
+src/components/Header.tsx:25: trailing whitespace.
+[32m+[m[32m        <a[m[41m [m
+src/components/Header.tsx:26: trailing whitespace.
+[32m+[m[32m          href="#"[m[41m [m
+src/components/Header.tsx:136: trailing whitespace.
+[32m+[m[32m            <a[m[41m [m
+src/components/Header.tsx:137: trailing whitespace.
+[32m+[m[32m              href="#hero"[m[41m [m
+src/components/Header.tsx:143: trailing whitespace.
+[32m+[m[32m            <a[m[41m [m
+src/components/Header.tsx:144: trailing whitespace.
+[32m+[m[32m              href="#shop"[m[41m [m
+src/components/Header.tsx:150: trailing whitespace.
+[32m+[m[32m            <a[m[41m [m
+src/components/Header.tsx:151: trailing whitespace.
+[32m+[m[32m              href="#collections"[m[41m [m
+src/components/Header.tsx:157: trailing whitespace.
+[32m+[m[32m            <a[m[41m [m
+src/components/Header.tsx:158: trailing whitespace.
+[32m+[m[32m              href="#founder"[m[41m [m
+src/components/Header.tsx:164: trailing whitespace.
+[32m+[m[32m            <a[m[41m [m
+src/components/Header.tsx:165: trailing whitespace.
+[32m+[m[32m              href="#craftsmanship"[m[41m [m
+src/components/Header.tsx:171: trailing whitespace.
+[32m+[m[32m            <a[m[41m [m
+src/components/Header.tsx:172: trailing whitespace.
+[32m+[m[32m              href="#contact"[m[41m [m
+src/i18n/LanguageContext.tsx:70: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:12: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:22: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:29: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:42: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:56: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:69: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:91: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:103: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:113: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:128: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:135: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:144: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:153: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:165: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:182: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:204: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:223: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:236: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:248: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:255: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:270: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:275: trailing whitespace.
+[32m+[m[41m  [m
+src/i18n/translations.ts:281: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:291: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:298: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:311: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:325: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:338: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:360: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:372: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:382: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:397: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:404: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:413: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:422: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:434: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:451: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:473: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:492: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:505: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:517: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:524: trailing whitespace.
+[32m+[m[41m    [m
+src/i18n/translations.ts:539: trailing whitespace.
+[32m+[m[41m    [m
+src/services/api.ts:1: trailing whitespace.
+[32m+[m[32mimport {[m[41m [m
+src/services/api.ts:2: trailing whitespace.
+[32m+[m[32m  Product,[m[41m [m
+src/services/api.ts:3: trailing whitespace.
+[32m+[m[32m  Sale,[m[41m [m
+src/services/api.ts:4: trailing whitespace.
+[32m+[m[32m  InventoryMovement,[m[41m [m
+src/services/api.ts:5: trailing whitespace.
+[32m+[m[32m  DashboardSummary,[m[41m [m
+src/services/api.ts:6: trailing whitespace.
+[32m+[m[32m  BrandSettings,[m[41m [m
+src/services/api.ts:11: trailing whitespace.
+[32m+[m[32mimport {[m[41m [m
+src/services/api.ts:12: trailing whitespace.
+[32m+[m[32m  INITIAL_PRODUCTS,[m[41m [m
+src/services/api.ts:13: trailing whitespace.
+[32m+[m[32m  INITIAL_SALES,[m[41m [m
+src/services/api.ts:14: trailing whitespace.
+[32m+[m[32m  INITIAL_MOVEMENTS,[m[41m [m
+src/services/api.ts:180: trailing whitespace.
+[32m+[m[32m    productId: string,[m[41m [m
+src/services/api.ts:181: trailing whitespace.
+[32m+[m[32m    change: number,[m[41m [m
+src/services/api.ts:182: trailing whitespace.
+[32m+[m[32m    movementType: InventoryMovement['movement_type'],[m[41m [m
+src/types/index.ts:8: trailing whitespace.
+[32m+[m[32mexport type JewelryCategory =[m[41m [m
+src/types/index.ts:89: trailing whitespace.
+[32m+[m[32mexport type InventoryMovementType =[m[41m [m
+src/types/index.ts:90: trailing whitespace.
+[32m+[m[32m  | 'initial_stock'[m[41m [m
+src/types/index.ts:91: trailing whitespace.
+[32m+[m[32m  | 'sale'[m[41m [m
+src/types/index.ts:92: trailing whitespace.
+[32m+[m[32m  | 'restock'[m[41m [m
+src/types/index.ts:93: trailing whitespace.
+[32m+[m[32m  | 'correction'[m[41m [m
+src/types/index.ts:94: trailing whitespace.
+[32m+[m[32m  | 'damage'[m[41m [m

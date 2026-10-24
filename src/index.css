@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --obsidian: #111111;
+  --obsidian-surface: #171717;
+  --obsidian-card: #1C1C1C;
+  --obsidian-border: rgba(200, 169, 110, 0.15);
+  --gold: #C8A96E;
+  --gold-light: #E4CF9F;
+  --gold-hover: #D7B97E;
+  --gold-dark: #9E7D42;
+  --ivory: #F7F3EB;
+  --ivory-dim: #D5CCC0;
+  --ivory-muted: #9E9689;
+  --bronze: #8C6D46;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--obsidian);
+  color: var(--ivory);
+  font-family: 'Plus Jakarta Sans', 'Noto Sans Ethiopic', system-ui, -apple-system, sans-serif;
+}
+
+.font-display {
+  font-family: 'Cormorant Garamond', 'Noto Serif Ethiopic', Georgia, serif;
+}
+
+.font-brand {
+  font-family: 'Cinzel', 'Noto Serif Ethiopic', serif;
+}
+
+.font-amharic {
+  font-family: 'Noto Sans Ethiopic', 'Noto Serif Ethiopic', sans-serif;
+}
+
+.font-amharic-serif {
+  font-family: 'Noto Serif Ethiopic', 'Noto Sans Ethiopic', serif;
+}
+
+/* Custom luxury subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C8A96E;
+}
+
+/* Tabular figures for pricing and inventory calculations */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
