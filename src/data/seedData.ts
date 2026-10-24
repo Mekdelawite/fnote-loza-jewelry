@@ -1,4 +1,11 @@
 import { Product, Sale, InventoryMovement, BrandSettings, AdminUser } from '../types';
+import {
+  craftsmanshipImage,
+  goldNecklaceImage,
+  heroJewelryImage,
+  silverCuffImage,
+  weddingRingsImage,
+} from '../assets/imageUrls';
 
 export const INITIAL_BRAND_SETTINGS: BrandSettings = {
   brand_name_en: "Fnote Loza",
@@ -46,7 +53,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       {
         id: "img-1-1",
-        url: "/src/assets/images/product_gold_necklace_1792823131025.jpg",
+        url: goldNecklaceImage,
         alt_en: "Lalibela 21K Gold Cross Pendant on raw linen",
         alt_am: "የላሊበላ 21 ካራት የወርቅ መስቀል",
         is_primary: true,
@@ -77,7 +84,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       {
         id: "img-2-1",
-        url: "/src/assets/images/product_silver_cuff_1792823130893.jpg",
+        url: silverCuffImage,
         alt_en: "Axumite 925 Sterling Silver Cuff on obsidian slate",
         alt_am: "የአክሱም ቅርጽ የብር አምባር",
         is_primary: true,
@@ -108,7 +115,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       {
         id: "img-3-1",
-        url: "/src/assets/images/product_wedding_rings_1792823132120.jpg",
+        url: weddingRingsImage,
         alt_en: "Pair of 21K gold and stone wedding rings on raw silk",
         alt_am: "የ21 ካራት ወርቅ የሠርግ ቀለበቶች",
         is_primary: true,
@@ -139,7 +146,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       {
         id: "img-4-1",
-        url: "/src/assets/images/hero_luxury_gold_jewelry_1792823129847.jpg",
+        url: heroJewelryImage,
         alt_en: "Royal gold choker and ensemble on limestone",
         alt_am: "የጎንደር ንጉሣዊ የወርቅ አንገት ጌጥ",
         is_primary: true,
@@ -170,7 +177,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       {
         id: "img-5-1",
-        url: "/src/assets/images/product_silver_cuff_1792823130893.jpg",
+        url: silverCuffImage,
         alt_en: "Solomonic 925 silver signet ring",
         alt_am: "የብር ቀለበት",
         is_primary: true,
@@ -201,7 +208,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       {
         id: "img-6-1",
-        url: "/src/assets/images/product_gold_necklace_1792823131025.jpg",
+        url: goldNecklaceImage,
         alt_en: "Queen of Sheba gold earrings",
         alt_am: "የንግሥተ ሳባ የወርቅ የጆሮ ጌጦች",
         is_primary: true,
@@ -232,7 +239,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       {
         id: "img-7-1",
-        url: "/src/assets/images/craftsmanship_artisan_workbench_1792823131791.jpg",
+        url: craftsmanshipImage,
         alt_en: "Bespoke jewelry benchcraft",
         alt_am: "በትእዛዝ የሚሰራ የጌጣጌጥ ስራ",
         is_primary: true,

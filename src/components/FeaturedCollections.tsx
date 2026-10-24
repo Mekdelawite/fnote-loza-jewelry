@@ -2,6 +2,12 @@ import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { JewelryCategory } from '../types';
 import { ArrowUpRight } from 'lucide-react';
+import {
+  craftsmanshipImage,
+  goldNecklaceImage,
+  silverCuffImage,
+  weddingRingsImage,
+} from '../assets/imageUrls';
 
 interface FeaturedCollectionsProps {
   onSelectCategory: (category: JewelryCategory) => void;
@@ -15,7 +21,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
       id: 'gold' as JewelryCategory,
       title: t('collectionGold'),
       desc: t('collectionGoldDesc'),
-      image: '/src/assets/images/product_gold_necklace_1792823131025.jpg',
+      image: goldNecklaceImage,
       purity: '21K & 18K Gold',
       amPurity: '21 እና 18 ካራት ወርቅ'
     },
@@ -23,7 +29,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
       id: 'silver' as JewelryCategory,
       title: t('collectionSilver'),
       desc: t('collectionSilverDesc'),
-      image: '/src/assets/images/product_silver_cuff_1792823130893.jpg',
+      image: silverCuffImage,
       purity: '925 Sterling Silver',
       amPurity: '925 ንጹህ ብር'
     },
@@ -31,7 +37,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
       id: 'wedding' as JewelryCategory,
       title: t('collectionWedding'),
       desc: t('collectionWeddingDesc'),
-      image: '/src/assets/images/product_wedding_rings_1792823132120.jpg',
+      image: weddingRingsImage,
       purity: 'Bridal Heirloom',
       amPurity: 'የሠርግ ቃልኪዳን'
     },
@@ -39,7 +45,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
       id: 'custom' as JewelryCategory,
       title: t('collectionBespoke'),
       desc: t('collectionBespokeDesc'),
-      image: '/src/assets/images/craftsmanship_artisan_workbench_1792823131791.jpg',
+      image: craftsmanshipImage,
       purity: 'Made-to-Order',
       amPurity: 'ልዩ የትእዛዝ ስራ'
     }

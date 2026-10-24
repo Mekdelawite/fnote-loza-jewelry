@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { ArrowRight, Compass } from 'lucide-react';
+import { heroJewelryImage } from '../assets/imageUrls';
 
 export const Hero: React.FC = () => {
   const { language, t } = useLanguage();
@@ -10,7 +11,7 @@ export const Hero: React.FC = () => {
       {/* Background Hero Jewelry Imagery with Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_luxury_gold_jewelry_1792823129847.jpg"
+          src={heroJewelryImage}
           alt="Handcrafted 21K gold jewelry on travertine stone"
           referrerPolicy="no-referrer"
           className="hero-image-enter w-full h-full object-cover object-center filter brightness-[0.62] contrast-[1.08] scale-[1.02]"

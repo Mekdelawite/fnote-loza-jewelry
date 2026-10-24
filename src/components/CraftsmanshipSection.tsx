@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { Hammer, Flame, Gem, Sparkles } from 'lucide-react';
+import { craftsmanshipImage } from '../assets/imageUrls';
 
 export const CraftsmanshipSection: React.FC = () => {
   const { language, t } = useLanguage();
@@ -27,7 +28,7 @@ export const CraftsmanshipSection: React.FC = () => {
           <div className="lg:col-span-7">
             <div className="relative aspect-[16/10] bg-[#181818] border border-[#C8A96E]/20 overflow-hidden shadow-2xl rounded-xs">
               <img
-                src="/src/assets/images/craftsmanship_artisan_workbench_1792823131791.jpg"
+                src={craftsmanshipImage}
                 alt="Master jeweler goldsmithing workbench"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center filter contrast-[1.06] hover:scale-105 transition-transform duration-700"

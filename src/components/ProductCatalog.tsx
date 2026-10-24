@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { Product, JewelryCategory, JewelryMaterial } from '../types';
 import { Search, SlidersHorizontal, Eye, MessageSquare, Check, Plus } from 'lucide-react';
+import { resolveBundledImageUrl } from '../assets/imageUrls';
 
 interface ProductCatalogProps {
   products: Product[];
@@ -241,7 +242,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                   >
                     {primaryImage ? (
                       <img
-                        src={primaryImage.url}
+                        src={resolveBundledImageUrl(primaryImage.url)}
                         alt={displayName}
                         referrerPolicy="no-referrer"
                         className="luxury-card-image w-full h-full object-cover object-center"

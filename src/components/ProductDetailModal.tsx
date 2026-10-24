@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { Product } from '../types';
 import { X, MessageSquare, Plus, Check, ShieldCheck, Scale, Ruler, Sparkles } from 'lucide-react';
+import { resolveBundledImageUrl } from '../assets/imageUrls';
 
 interface ProductDetailModalProps {
   product: Product | null;
@@ -61,7 +62,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
           <div className="relative aspect-square overflow-hidden bg-[#181818] rounded-xs mb-4">
             {currentImage ? (
               <img
-                src={currentImage.url}
+                src={resolveBundledImageUrl(currentImage.url)}
                 alt={displayName}
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center"
@@ -84,7 +85,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                     activeImageIndex === idx ? 'border-[#C8A96E]' : 'border-transparent opacity-60 hover:opacity-100'
                   }`}
                 >
-                  <img src={img.url} alt="" className="w-full h-full object-cover" />
+                  <img src={resolveBundledImageUrl(img.url)} alt="" className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>

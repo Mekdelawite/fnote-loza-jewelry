@@ -12,6 +12,7 @@ import {
   PaymentMethod
 } from '../../types';
 import { api } from '../../services/api';
+import { goldNecklaceImage, resolveBundledImageUrl } from '../../assets/imageUrls';
 import { 
   LayoutDashboard, 
   Package, 
@@ -161,7 +162,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       images: [
         {
           id: `img-${Date.now()}`,
-          url: (formData.get('image_url') as string).trim() || '/src/assets/images/product_gold_necklace_1792823131025.jpg',
+          url: (formData.get('image_url') as string).trim() || goldNecklaceImage,
           alt_en: (formData.get('name_en') as string).trim(),
           alt_am: (formData.get('name_am') as string).trim(),
           is_primary: true
@@ -613,7 +614,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                               <div className="flex items-center gap-3">
                                 {prod.images[0]?.url && (
                                   <img
-                                    src={prod.images[0].url}
+                                    src={resolveBundledImageUrl(prod.images[0].url)}
                                     alt=""
                                     className="w-9 h-9 object-cover rounded-xs border border-[#C8A96E]/20 shrink-0"
                                   />
@@ -1233,7 +1234,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 <input
                   name="image_url"
                   type="text"
-                  defaultValue={editingProduct?.images[0]?.url || '/src/assets/images/product_gold_necklace_1792823131025.jpg'}
+                  defaultValue={editingProduct?.images[0]?.url || goldNecklaceImage}
                   className="w-full px-3 py-2 bg-[#141414] border border-[#C8A96E]/20 text-xs text-[#F7F3EB] rounded-xs"
                 />
               </div>

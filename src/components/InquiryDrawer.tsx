@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { Product } from '../types';
+import { resolveBundledImageUrl } from '../assets/imageUrls';
 import { X, Trash2, MessageSquare, ShoppingBag } from 'lucide-react';
 
 interface InquiryDrawerProps {
@@ -85,7 +86,7 @@ export const InquiryDrawer: React.FC<InquiryDrawerProps> = ({
                 >
                   <div className="w-16 h-16 bg-[#121212] overflow-hidden shrink-0 border border-[#C8A96E]/20">
                     {img && (
-                      <img src={img} alt={displayName} className="w-full h-full object-cover" />
+                      <img src={resolveBundledImageUrl(img)} alt={displayName} className="w-full h-full object-cover" />
                     )}
                   </div>
 
