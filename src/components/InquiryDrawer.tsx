@@ -47,7 +47,7 @@ export const InquiryDrawer: React.FC<InquiryDrawerProps> = ({
       <div className="absolute inset-0" onClick={onClose} />
 
       {/* Slide-in Drawer */}
-      <div className="relative w-full max-w-md bg-[#161616] border-l border-[#C8A96E]/20 h-full flex flex-col justify-between shadow-2xl z-10">
+      <div className="luxury-drawer relative w-full max-w-md bg-[#161616] border-l border-[#C8A96E]/20 h-full flex flex-col justify-between shadow-2xl z-10">
         {/* Header */}
         <div className="p-6 border-b border-[#C8A96E]/15 flex items-center justify-between">
           <div className="flex items-center gap-2">

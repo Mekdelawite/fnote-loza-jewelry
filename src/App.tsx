@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { LanguageProvider } from './i18n/LanguageContext';
+import { ThemeProvider } from './theme/ThemeContext';
 import { Product, BrandSettings, JewelryCategory } from './types';
 import { api } from './services/api';
 import { INITIAL_BRAND_SETTINGS } from './data/seedData';
@@ -83,6 +84,49 @@ function MainApp() {
     };
   }, []);
 
+  useEffect(() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion || !('IntersectionObserver' in window)) return;
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    const observeRevealElements = (root: ParentNode) => {
+      root.querySelectorAll<HTMLElement>('[data-reveal]:not(.is-visible)').forEach((element) => {
+        revealObserver.observe(element);
+      });
+    };
+
+    document.documentElement.classList.add('motion-ready');
+    observeRevealElements(document);
+
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (!(node instanceof HTMLElement)) return;
+          if (node.matches('[data-reveal]:not(.is-visible)')) revealObserver.observe(node);
+          observeRevealElements(node);
+        });
+      });
+    });
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      mutationObserver.disconnect();
+      revealObserver.disconnect();
+      document.documentElement.classList.remove('motion-ready');
+    };
+  }, []);
+
   const handleAddToInquiry = (product: Product) => {
     setInquiryItems(prev => {
       const exists = prev.some(p => p.id === product.id);
@@ -134,7 +178,7 @@ function MainApp() {
   };
 
   return (
-    <div className="min-h-screen bg-[#111111] text-[#F7F3EB] flex flex-col font-sans-body">
+    <div className="page-shell min-h-screen bg-[#111111] text-[#F7F3EB] flex flex-col font-sans-body">
       {/* Header with Top Bar Contract compliance */}
       <Header
         inquiryCount={inquiryItems.length}
@@ -221,8 +265,10 @@ function MainApp() {
 
 export default function App() {
   return (
-    <LanguageProvider>
-      <MainApp />
-    </LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider>
+        <MainApp />
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }

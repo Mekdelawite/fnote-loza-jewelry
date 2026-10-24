@@ -88,7 +88,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
   }, [products, selectedCategory, selectedMaterial, selectedPurity, sortBy, availableOnly, searchQuery]);
 
   return (
-    <section id="shop" className="py-24 bg-[#111111]">
+    <section id="shop" data-reveal className="py-24 bg-[#111111]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12">
@@ -231,6 +231,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
               return (
                 <div
                   key={prod.id}
+                  data-reveal
                   className="group bg-[#171717] border border-[#C8A96E]/15 hover:border-[#C8A96E]/50 transition-all duration-300 flex flex-col justify-between overflow-hidden rounded-sm hover:-translate-y-1"
                 >
                   {/* Image Container (65-75% height) */}
@@ -243,7 +244,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                         src={primaryImage.url}
                         alt={displayName}
                         referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+                        className="luxury-card-image w-full h-full object-cover object-center"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#1C1C1C] to-[#121212] text-[#8C6D46]">

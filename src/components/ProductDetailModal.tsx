@@ -46,7 +46,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
       <div className="fixed inset-0" onClick={onClose} />
 
       {/* Modal Card */}
-      <div className="relative bg-[#171717] border border-[#C8A96E]/30 w-full max-w-4xl overflow-hidden shadow-2xl z-10 flex flex-col md:flex-row">
+      <div className="luxury-dialog relative bg-[#171717] border border-[#C8A96E]/30 w-full max-w-4xl overflow-hidden shadow-2xl z-10 flex flex-col md:flex-row">
         {/* Close Button */}
         <button
           onClick={onClose}

@@ -286,7 +286,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
   return (
     <div className="fixed inset-0 z-[100] overflow-y-auto bg-[#111111]/95 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 lg:p-6">
-      <div className="relative bg-[#171717] border border-[#C8A96E]/40 w-full max-w-7xl h-[94vh] flex flex-col rounded-xs shadow-2xl overflow-hidden">
+      <div className="luxury-dialog relative bg-[#171717] border border-[#C8A96E]/40 w-full max-w-7xl h-[94vh] flex flex-col rounded-xs shadow-2xl overflow-hidden">
         {/* Top Header Bar */}
         <div className="p-4 sm:p-6 bg-[#141414] border-b border-[#C8A96E]/20 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">

@@ -46,7 +46,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
   ];
 
   return (
-    <section id="collections" className="py-24 bg-[#141414] border-t border-b border-[#C8A96E]/15">
+    <section id="collections" data-reveal className="py-24 bg-[#141414] border-t border-b border-[#C8A96E]/15">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -66,6 +66,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
           {collections.map((col) => (
             <div
               key={col.id}
+              data-reveal
               onClick={() => {
                 onSelectCategory(col.id);
                 const el = document.getElementById('shop');
@@ -79,7 +80,7 @@ export const FeaturedCollections: React.FC<FeaturedCollectionsProps> = ({ onSele
                   src={col.image}
                   alt={col.title}
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+                  className="luxury-card-image w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-transparent to-transparent opacity-80" />
                 

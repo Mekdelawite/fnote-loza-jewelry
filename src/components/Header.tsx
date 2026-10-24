@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
-import { ShoppingBag, ShieldCheck, Menu, X } from 'lucide-react';
+import { useTheme } from '../theme/ThemeContext';
+import { ShoppingBag, ShieldCheck, Menu, X, Sun, Moon } from 'lucide-react';
 
 interface HeaderProps {
   inquiryCount: number;
@@ -16,24 +17,25 @@ export const Header: React.FC<HeaderProps> = ({
   isAdminLoggedIn
 }) => {
   const { language, setLanguage, t } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 bg-[#111111]/95 backdrop-blur-md border-b border-[#C8A96E]/20 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6 sm:gap-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4 xl:gap-6">
         {/* Zone 1: Brand Wordmark */}
         <a 
           href="#" 
-          className="group flex items-center gap-3 text-xl sm:text-2xl font-brand font-semibold tracking-wider text-[#F7F3EB] hover:text-[#C8A96E] transition-colors whitespace-nowrap shrink-0"
+          className="group flex items-center gap-2 sm:gap-3 text-base sm:text-xl xl:text-2xl font-brand font-semibold tracking-wider text-[#F7F3EB] hover:text-[#C8A96E] transition-colors whitespace-nowrap shrink-0"
         >
-          <span className="w-2.5 h-2.5 rounded-full bg-[#C8A96E] opacity-90 group-hover:scale-125 transition-transform" />
+          <span className="hidden sm:block w-2.5 h-2.5 rounded-full bg-[#C8A96E] opacity-90 group-hover:scale-125 transition-transform" />
           <span className="tracking-[0.18em]">
             {language === 'am' ? 'ፍኖተ ሎዛ' : 'FNOTE LOZA'}
           </span>
         </a>
 
         {/* Zone 2: Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium tracking-wide text-[#D5CCC0]">
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-8 text-xs xl:text-sm font-medium tracking-wide text-[#D5CCC0]">
           <a href="#hero" className="hover:text-[#C8A96E] transition-colors whitespace-nowrap shrink-0">
             {t('navHome')}
           </a>
@@ -63,9 +65,9 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* Zone 3: Language switcher + Inquiries + Admin Button */}
-        <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 xl:gap-3 shrink-0">
           {/* Bilingual Switcher: EN | አማ */}
-          <div className="flex items-center border border-[#C8A96E]/30 rounded-xs bg-[#181818] p-0.5 text-xs font-medium tracking-wider">
+          <div className="hidden sm:flex items-center border border-[#C8A96E]/30 rounded-xs bg-[#181818] p-0.5 text-xs font-medium tracking-wider">
             <button
               onClick={() => setLanguage('en')}
               className={`px-2.5 py-1 transition-colors rounded-xs cursor-pointer ${
@@ -91,10 +93,20 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </div>
 
+          <button
+            onClick={toggleTheme}
+            className="p-2 border border-[#C8A96E]/30 rounded-xs text-[#C8A96E] hover:bg-[#1A1A1A] transition-colors cursor-pointer"
+            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            aria-pressed={theme === 'light'}
+          >
+            {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
+
           {/* Inquiry List Bag Button */}
           <button
             onClick={onOpenInquiryDrawer}
-            className="relative p-2 text-[#D5CCC0] hover:text-[#C8A96E] transition-colors rounded-xs hover:bg-[#1A1A1A] cursor-pointer"
+            className="relative hidden sm:block p-2 text-[#D5CCC0] hover:text-[#C8A96E] transition-colors rounded-xs hover:bg-[#1A1A1A] cursor-pointer"
             title={t('inquiryDrawerTitle')}
             aria-label="View Inquiry List"
           >
@@ -109,13 +121,13 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Admin Portal Button — ALWAYS VISIBLE on all screens */}
           <button
             onClick={onOpenAdmin}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-xs border border-[#C8A96E] bg-[#C8A96E]/15 text-[#C8A96E] hover:bg-[#C8A96E] hover:text-[#111111] transition-all whitespace-nowrap shrink-0 shadow-sm cursor-pointer"
+            className="hidden md:flex items-center gap-1.5 px-2 xl:px-3 py-1.5 text-xs font-semibold rounded-xs border border-[#C8A96E] bg-[#C8A96E]/15 text-[#C8A96E] hover:bg-[#C8A96E] hover:text-[#111111] transition-all whitespace-nowrap shrink-0 shadow-sm cursor-pointer"
             title={t('navAdmin')}
             aria-label="Open Admin Dashboard"
           >
             <ShieldCheck className="w-4 h-4" />
-            <span className="hidden sm:inline">{t('navAdmin')}</span>
-            <span className="sm:hidden">{language === 'am' ? 'አስተዳዳሪ' : 'Admin'}</span>
+            <span className="hidden xl:inline">{t('navAdmin')}</span>
+            <span className="sr-only">{language === 'am' ? 'አስተዳዳሪ' : 'Admin'}</span>
           </button>
 
           {/* Mobile Menu Hamburger */}
@@ -132,6 +144,35 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-[#C8A96E]/20 bg-[#141414] px-6 py-6 space-y-4">
+          <div className="flex items-center gap-2 border-b border-[#C8A96E]/15 pb-4 sm:hidden">
+            <button
+              onClick={() => setLanguage('en')}
+              className={`px-3 py-2 text-xs border rounded-xs ${language === 'en' ? 'bg-[#C8A96E] text-[#111111]' : 'border-[#C8A96E]/30 text-[#D5CCC0]'}`}
+            >
+              English
+            </button>
+            <button
+              onClick={() => setLanguage('am')}
+              className={`px-3 py-2 text-xs border rounded-xs font-amharic ${language === 'am' ? 'bg-[#C8A96E] text-[#111111]' : 'border-[#C8A96E]/30 text-[#D5CCC0]'}`}
+            >
+              አማርኛ
+            </button>
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onOpenInquiryDrawer();
+              }}
+              aria-label={inquiryCount > 0 ? `${t('inquiryDrawerTitle')} (${inquiryCount})` : t('inquiryDrawerTitle')}
+              className="relative ml-auto inline-flex items-center gap-2 px-3 py-2 text-xs border border-[#C8A96E]/30 text-[#D5CCC0] rounded-xs"
+            >
+              <ShoppingBag className="w-4 h-4" />
+              {inquiryCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-[#C8A96E] text-[#111111] text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                  {inquiryCount}
+                </span>
+              )}
+            </button>
+          </div>
           <nav className="flex flex-col space-y-3 text-base font-medium">
             <a 
               href="#hero" 

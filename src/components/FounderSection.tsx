@@ -79,7 +79,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({
   const founderBio = language === 'am' ? settings.founder_bio_am : settings.founder_bio_en;
 
   return (
-    <section id="founder" className="py-28 bg-[#141414] border-t border-b border-[#C8A96E]/20 relative overflow-hidden">
+    <section id="founder" data-reveal className="py-28 bg-[#141414] border-t border-b border-[#C8A96E]/20 relative overflow-hidden">
       {/* Background Subtle Geometry Accent */}
       <div className="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-[#C8A96E]/5 blur-3xl pointer-events-none" />
 

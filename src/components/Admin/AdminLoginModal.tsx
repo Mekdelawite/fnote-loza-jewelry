@@ -42,7 +42,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({
     <div className="fixed inset-0 z-50 overflow-y-auto bg-[#111111]/85 backdrop-blur-md flex items-center justify-center p-4">
       <div className="fixed inset-0" onClick={onClose} />
 
-      <div className="relative bg-[#1A1A1A] border border-[#C8A96E]/40 w-full max-w-md p-6 sm:p-8 rounded-xs shadow-2xl z-10">
+      <div className="luxury-dialog relative bg-[#1A1A1A] border border-[#C8A96E]/40 w-full max-w-md p-6 sm:p-8 rounded-xs shadow-2xl z-10">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-[#9E9689] hover:text-[#F7F3EB]"

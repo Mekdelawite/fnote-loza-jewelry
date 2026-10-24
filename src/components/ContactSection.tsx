@@ -23,7 +23,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#141414] border-t border-[#C8A96E]/15">
+    <section id="contact" data-reveal className="py-24 bg-[#141414] border-t border-[#C8A96E]/15">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-xs font-semibold tracking-[0.2em] text-[#C8A96E] uppercase mb-3">
