@@ -23,7 +23,8 @@ from backend.app.auth import create_access_token, get_password_hash, pwd_context
 from backend.app.config import Settings, settings
 from backend.app.database import Base, SessionLocal, engine as startup_engine, get_db
 from backend.app.main import app, seed_initial_data
-from backend.app.models import AdminUser
+from backend.app.models import AdminUser, Product, ProductImage
+from backend.app.schemas import ProductResponse
 
 pwd_context.update(bcrypt__rounds=4)
 
@@ -244,6 +245,8 @@ def test_seed_is_idempotent_and_preserves_existing_admin_password():
         admin = db.query(AdminUser).filter(AdminUser.email == TEST_ADMIN_EMAIL).one()
         existing_hash = get_password_hash("existing database password")
         admin.hashed_password = existing_hash
+        product = db.query(Product).filter_by(sku="FNL-GD-001").one()
+        db.query(ProductImage).filter_by(product_id=product.id).delete()
         db.commit()
 
     seed_initial_data()
@@ -255,6 +258,15 @@ def test_seed_is_idempotent_and_preserves_existing_admin_password():
         assert admins[0].hashed_password == existing_hash
         assert verify_password("existing database password", admins[0].hashed_password)
         assert not verify_password(TEST_ADMIN_PASSWORD, admins[0].hashed_password)
+        products = {product.sku: product for product in db.query(Product).all()}
+        expected_image_urls = {
+            "FNL-GD-001": "/src/assets/images/product_gold_necklace_1792823131025.jpg",
+            "FNL-SV-002": "/src/assets/images/product_silver_cuff_1792823130893.jpg",
+            "FNL-WD-003": "/src/assets/images/product_wedding_rings_1792823132120.jpg",
+        }
+        for sku, image_url in expected_image_urls.items():
+            assert [image.url for image in products[sku].images] == [image_url]
+            assert ProductResponse.model_validate(products[sku]).images[0].url == image_url
 
 
 def test_health():

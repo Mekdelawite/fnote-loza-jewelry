@@ -10,6 +10,27 @@ from backend.app.routers import products, sales, inventory, dashboard, settings 
 
 logger = logging.getLogger(__name__)
 
+DEFAULT_PRODUCT_IMAGES = {
+    "FNL-GD-001": {
+        "url": "/src/assets/images/product_gold_necklace_1792823131025.jpg",
+        "alt_en": "Lalibela 21K Gold Cross Pendant on raw linen",
+        "alt_am": "የላሊበላ 21 ካራት የወርቅ መስቀል",
+        "is_primary": True,
+    },
+    "FNL-SV-002": {
+        "url": "/src/assets/images/product_silver_cuff_1792823130893.jpg",
+        "alt_en": "Axumite 925 Sterling Silver Cuff on obsidian slate",
+        "alt_am": "የአክሱም ቅርጽ የብር አምባር",
+        "is_primary": True,
+    },
+    "FNL-WD-003": {
+        "url": "/src/assets/images/product_wedding_rings_1792823132120.jpg",
+        "alt_en": "Pair of 21K gold and stone wedding rings on raw silk",
+        "alt_am": "የ21 ካራት ወርቅ የሠርግ ቀለበቶች",
+        "is_primary": True,
+    },
+}
+
 # Create database tables
 Base.metadata.create_all(bind=engine)
 
@@ -136,6 +157,11 @@ def seed_initial_data():
             ]
             for p in initial_prods:
                 db.add(p)
+
+        for sku, image_data in DEFAULT_PRODUCT_IMAGES.items():
+            product = db.query(Product).filter(Product.sku == sku).first()
+            if product and not product.images:
+                db.add(ProductImage(product_id=product.id, **image_data))
 
         db.commit()
     except Exception as exc:
