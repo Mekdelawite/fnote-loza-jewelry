@@ -115,7 +115,7 @@ export const translations = {
     contactTitle: "Visit & Inquiries",
     contactSubtitle: "We invite you to experience our collection firsthand or discuss a custom commission.",
     location: "Boutique Location",
-    boutiqueAddress: "Bole District, Addis Ababa, Ethiopia",
+    boutiqueAddress: "Bahirdar, Abaymado, Ethiopia",
     telephone: "Phone",
     hours: "Opening Hours",
     hoursVal: "Monday – Saturday: 9:00 AM – 7:30 PM",
